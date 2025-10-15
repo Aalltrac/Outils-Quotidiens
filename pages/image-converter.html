@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <!-- ...existing content... -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Convertisseur & Compresseur d'images</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9c6b2f8.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <!-- ...existing content... -->
+  <main class="tool">
+    <a href="../index.html" class="helper"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+    <h1>Images: convertisseur & compression</h1>
+    <div class="row">
+      <div class="field">
+        <label>Importer une image</label>
+        <input type="file" id="file" accept="image/*">
+      </div>
+      <div class="field">
+        <label>Format de sortie</label>
+        <select id="format">
+          <option value="image/png">PNG</option>
+          <option value="image/jpeg">JPG</option>
+          <option value="image/webp">WebP</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Qualité (JPG/WebP)</label>
+        <input type="range" id="quality" min="0.1" max="1" step="0.05" value="0.8">
+      </div>
+    </div>
+    <div class="actions">
+      <button class="primary" id="convert" disabled>Convertir</button>
+      <button id="download" disabled>Télécharger</button>
+    </div>
+    <div class="output">
+      <canvas id="canvas" style="max-width:100%; border-radius:8px"></canvas>
+      <p class="small" id="meta"></p>
+    </div>
+  </main>
+  <!-- ...existing content... -->
+  <script type="module" src="../js/tools/image-converter.js"></script>
+</body>
+</html>
+

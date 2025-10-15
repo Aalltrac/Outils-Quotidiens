@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <!-- ...existing content... -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculateur de surface</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9c6b2f8.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <!-- ...existing content... -->
+  <main class="tool">
+    <a href="../index.html" class="helper"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+    <h1>Surface (m²)</h1>
+    <div class="row">
+      <div class="field"><label>Longueur (m)</label><input id="len" type="number" min="0" step="0.01"></div>
+      <div class="field"><label>Largeur (m)</label><input id="wid" type="number" min="0" step="0.01"></div>
+    </div>
+    <div class="actions"><button class="primary" id="compute">Calculer</button></div>
+    <div class="output" id="result"></div>
+  </main>
+  <!-- ...existing content... -->
+  <script type="module" src="../js/tools/area.js"></script>
+</body>
+</html>
+

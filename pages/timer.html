@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <!-- ...existing content... -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Timer & Chronomètre</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9c6b2f8.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <!-- ...existing content... -->
+  <main class="tool">
+    <a href="../index.html" class="helper"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+    <h1>Timer & Chrono</h1>
+    <section>
+      <h2 style="margin:12px 0 8px">Timer</h2>
+      <div class="row">
+        <div class="field"><label>Minutes</label><input id="tMin" type="number" min="0" value="0"></div>
+        <div class="field"><label>Secondes</label><input id="tSec" type="number" min="0" value="30"></div>
+      </div>
+      <div class="actions"><button class="primary" id="startTimer">Démarrer</button><button id="stopTimer">Stop</button></div>
+      <div class="output" id="timerDisp">00:30</div>
+    </section>
+    <section>
+      <h2 style="margin:12px 0 8px">Chronomètre</h2>
+      <div class="actions"><button class="primary" id="startChrono">Start</button><button id="lap">Tour</button><button id="resetChrono">Reset</button></div>
+      <div class="output" id="chronoDisp">00:00.0</div>
+      <ul id="laps" class="small"></ul>
+    </section>
+    <audio id="beep" src="../sounds/beep.mp3" preload="auto"></audio>
+  </main>
+  <!-- ...existing content... -->
+  <script type="module" src="../js/tools/timer.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <!-- ...existing content... -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sélecteur de couleur</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <script type="importmap">
+  {
+    "imports": { "tinycolor2": "https://esm.sh/tinycolor2@1.6.0" }
+  }
+  </script>
+  <script src="https://kit.fontawesome.com/a2d9c6b2f8.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <!-- ...existing content... -->
+  <main class="tool">
+    <a href="../index.html" class="helper"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+    <h1>Couleur</h1>
+    <div class="row">
+      <div class="field"><label>Choisir</label><input type="color" id="picker" value="#3366ff"></div>
+      <div class="field"><label>HEX</label><input id="hex" type="text" aria-label="HEX"></div>
+      <div class="field"><label>RGB</label><input id="rgb" type="text" aria-label="RGB"></div>
+      <div class="field"><label>HSL</label><input id="hsl" type="text" aria-label="HSL"></div>
+    </div>
+    <div class="actions"><button id="copyHex">Copier HEX</button><button id="copyRgb">Copier RGB</button><button id="copyHsl">Copier HSL</button></div>
+    <div class="output" id="preview" style="height:80px; border-radius:12px"></div>
+  </main>
+  <!-- ...existing content... -->
+  <script type="module" src="../js/tools/color-picker.js"></script>
+</body>
+</html>
+
