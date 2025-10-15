@@ -1,4 +1,3 @@
-/* ...existing code... */
 import { copyText } from '../script.js';
 const rateMap = { prive: 0.23, cadre: 0.25, public: 0.15 };
 const amount = document.getElementById('amount');
@@ -18,5 +17,3 @@ document.getElementById('compute').onclick = () => {
   result.innerHTML = `<strong>${fmt(out)}</strong> <button id="copy" class="icon-btn">Copier</button>`;
   document.getElementById('copy').onclick = () => copyText(out.toFixed(2), document.getElementById('copy'));
 };
-/* ...existing code... */
-

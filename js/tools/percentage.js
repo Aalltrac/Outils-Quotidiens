@@ -1,4 +1,3 @@
-/* ...existing code... */
 import { copyText } from '../script.js';
 
 const pct = document.getElementById('pct');
@@ -29,5 +28,3 @@ document.getElementById('dec').onclick = () => {
   out.innerHTML = `Réduction: ${fmt(b)} → ${fmt(res)} (<button id="copy2" class="icon-btn">Copier</button>)`;
   document.getElementById('copy2').onclick = () => copyText(res.toString(), document.getElementById('copy2'));
 };
-/* ...existing code... */
-

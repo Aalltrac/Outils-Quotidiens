@@ -1,4 +1,3 @@
-/* ...existing code... */
 const file = document.getElementById('file');
 const fmt = document.getElementById('format');
 const q = document.getElementById('quality');
@@ -42,5 +41,3 @@ btnDownload.onclick = () => {
   a.click();
   setTimeout(()=>URL.revokeObjectURL(outURL),500);
 };
-/* ...existing code... */
-
