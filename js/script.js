@@ -1,4 +1,3 @@
-// Theme toggle & small UX helpers
 const root = document.documentElement;
 const preferDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 if (!localStorage.getItem('theme')) localStorage.setItem('theme', preferDark ? 'dark' : 'light');
@@ -15,7 +14,6 @@ function applyTheme(mode) {
   else root.classList.remove('dark');
 }
 
-// Copy helper
 export async function copyText(text, button) {
   try {
     await navigator.clipboard.writeText(text);
@@ -26,4 +24,3 @@ export function flash(el) {
   el?.classList.add('flash');
   setTimeout(()=> el?.classList.remove('flash'), 300);
 }
-
