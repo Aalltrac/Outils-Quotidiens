@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Outils Quotidiens</title>
+  <meta name="description" content="Suite d'outils utiles 100% web, rapide et minimaliste.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="sounds/beep.mp3" as="audio">
+  <script src="https://kit.fontawesome.com/a2d9c6b2f8.js" crossorigin="anonymous" defer></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "pdfjs-dist": "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/+esm",
+      "qrcode": "https://esm.sh/qrcode@1.5.3",
+      "tinycolor2": "https://esm.sh/tinycolor2@1.6.0"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Accueil">
+      <span class="logo-mark">◎</span>
+      <span class="logo-text">Outils Quotidiens</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <button id="themeToggle" class="icon-btn" aria-label="Basculer le mode sombre" title="Mode sombre">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a href="https://github.com/" class="icon-btn" aria-label="GitHub" title="GitHub" rel="noopener" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1>Outils rapides, 100% web</h1>
+      <p class="sub">Calculatrices, convertisseurs et utilitaires. Aucun compte, aucune donnée stockée.</p>
+    </section>
+
+    <section class="grid" aria-label="Liste des outils">
+      <a class="card" href="pages/percentage.html">
+        <i class="fa-solid fa-percent"></i>
+        <h2>Pourcentages</h2>
+        <p>Calculer X% de Y, augmentations/réductions.</p>
+      </a>
+      <a class="card" href="pages/salary.html">
+        <i class="fa-solid fa-euro-sign"></i>
+        <h2>Brut ↔ Net (FR)</h2>
+        <p>Estimation du salaire net.</p>
+      </a>
+      <a class="card" href="pages/vat.html">
+        <i class="fa-solid fa-receipt"></i>
+        <h2>TVA HT/TTC</h2>
+        <p>Taux 20%, 10%, 5.5%.</p>
+      </a>
+      <a class="card" href="pages/area.html">
+        <i class="fa-solid fa-ruler-combined"></i>
+        <h2>Surface</h2>
+        <p>m² = longueur × largeur.</p>
+      </a>
+      <a class="card" href="pages/counter.html">
+        <i class="fa-solid fa-file-lines"></i>
+        <h2>Mots & caractères</h2>
+        <p>Comptage en temps réel.</p>
+      </a>
+      <a class="card" href="pages/image-converter.html">
+        <i class="fa-solid fa-image"></i>
+        <h2>Images</h2>
+        <p>JPG ↔ PNG ↔ WebP + compression.</p>
+      </a>
+      <a class="card" href="pages/pdf-to-images.html">
+        <i class="fa-solid fa-file-pdf"></i>
+        <h2>PDF → Images</h2>
+        <p>Exporter chaque page en PNG.</p>
+      </a>
+      <a class="card" href="pages/password.html">
+        <i class="fa-solid fa-key"></i>
+        <h2>Mot de passe</h2>
+        <p>Sécurisé et personnalisable.</p>
+      </a>
+      <a class="card" href="pages/qrcode.html">
+        <i class="fa-solid fa-qrcode"></i>
+        <h2>QR Code</h2>
+        <p>À partir de texte/URL.</p>
+      </a>
+      <a class="card" href="pages/color-picker.html">
+        <i class="fa-solid fa-eye-dropper"></i>
+        <h2>Couleur</h2>
+        <p>HEX, RGB, HSL.</p>
+      </a>
+      <a class="card" href="pages/timer.html">
+        <i class="fa-solid fa-stopwatch"></i>
+        <h2>Timer & Chrono</h2>
+        <p>Avec signal sonore.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Outils Quotidiens · <a href="#" aria-label="Mentions légales">Mentions légales</a></p>
+  </footer>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
+
