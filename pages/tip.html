@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculateur de pourboire</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9c6b2f8.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <main class="tool">
+    <a href="../index.html" class="helper"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+    <h1>Pourboire</h1>
+    <div class="row">
+      <div class="field"><label>Montant (€)</label><input id="amount" type="number" min="0" step="0.01" placeholder="Ex: 48.50"></div>
+      <div class="field"><label>Pourcentage (%)</label><input id="tipPct" type="range" min="0" max="30" value="10"><span class="small" id="tipLbl">10%</span></div>
+      <div class="field"><label>Personnes</label><input id="people" type="number" min="1" value="1"></div>
+    </div>
+    <div class="actions"><button class="primary" id="compute">Calculer</button><button id="copy">Copier</button></div>
+    <div class="output" id="result"></div>
+  </main>
+  <script type="module" src="../js/tools/tip.js"></script>
+</body>
+</html>

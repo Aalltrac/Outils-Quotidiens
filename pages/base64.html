@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Convertisseur Base64</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9c6b2f8.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <main class="tool">
+    <a href="../index.html" class="helper"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+    <h1>Convertisseur Base64</h1>
+    <section>
+      <h2 style="margin:12px 0 8px">Encoder</h2>
+      <div class="row">
+        <div class="field"><label>Texte</label><textarea id="encText" placeholder="Saisissez du texte à encoder..."></textarea></div>
+        <div class="field"><label>Ou image</label><input id="encFile" type="file" accept="image/*"></div>
+      </div>
+      <div class="actions"><button class="primary" id="doEncode">Encoder</button><button id="copyEnc">Copier</button></div>
+      <div class="output"><textarea id="encOut" readonly style="min-height:100px"></textarea></div>
+    </section>
+    <section>
+      <h2 style="margin:12px 0 8px">Décoder</h2>
+      <div class="field"><label>Base64</label><textarea id="decInput" placeholder="Collez une chaîne Base64..."></textarea></div>
+      <div class="actions"><button class="primary" id="doDecode">Décoder</button><button id="copyDec">Copier</button></div>
+      <div class="output">
+        <div class="row">
+          <div class="field"><label>Texte décodé</label><textarea id="decText" readonly></textarea></div>
+          <div class="field"><label>Prévisualisation image (si applicable)</label><img id="decImg" alt="Aperçu" style="max-width:100%; border-radius:12px"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="../js/tools/base64.js"></script>
+</body>
+</html>
