@@ -1,4 +1,3 @@
-// Générateur de Lorem Ipsum
 import { copyText } from '../script.js';
 
 const BASE = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. ' +
@@ -30,4 +29,3 @@ document.getElementById('copy').onclick = () => {
   const txt = out.textContent?.trim(); if (!txt) return;
   copyText(txt, document.getElementById('copy'));
 };
-

@@ -1,4 +1,3 @@
-/* ...existing code... */
 import * as pdfjsLib from 'pdfjs-dist';
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
 
@@ -34,5 +33,3 @@ processBtn.onclick = async () => {
     gallery.appendChild(item);
   }
 };
-/* ...existing code... */
-

@@ -1,4 +1,3 @@
-// Calculateur de pourboire
 import { copyText } from '../script.js';
 
 const amount = document.getElementById('amount');
@@ -23,4 +22,3 @@ document.getElementById('copy').onclick = () => {
   const txt = result.textContent?.trim(); if (!txt) return;
   copyText(txt, document.getElementById('copy'));
 };
-

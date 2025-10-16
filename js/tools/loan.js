@@ -1,4 +1,3 @@
-// Calculateur de prêt/crédit avec tableau d'amortissement
 import { copyText } from '../script.js';
 
 const principal = document.getElementById('principal');
@@ -41,4 +40,3 @@ document.getElementById('copy').onclick = () => {
   const txt = summary.textContent?.trim(); if (!txt) return;
   copyText(txt, document.getElementById('copy'));
 };
-

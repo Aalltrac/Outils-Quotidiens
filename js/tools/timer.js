@@ -1,4 +1,3 @@
-/* ...existing code... */
 const tMin = document.getElementById('tMin');
 const tSec = document.getElementById('tSec');
 const timerDisp = document.getElementById('timerDisp');
@@ -43,5 +42,3 @@ lapBtn.onclick = () => {
   laps.prepend(li);
 };
 resetChrono.onclick = () => { clearInterval(cInt); cRunning=false; lastLap=0; chronoDisp.textContent='00:00.0'; laps.innerHTML=''; startChrono.textContent='Start'; };
-/* ...existing code... */
-

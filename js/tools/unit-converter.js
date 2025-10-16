@@ -1,4 +1,3 @@
-// Convertisseur d'unités — Longueur, Poids, Volume, Température
 import { copyText } from '../script.js';
 
 const category = document.getElementById('category');
@@ -30,10 +29,9 @@ document.getElementById('convert').onclick = () => {
   let out;
   if (category.value !== 'temperature') {
     const map = UNITS[category.value].units;
-    const baseVal = v * map[from.value]; // vers unité de base
+    const baseVal = v * map[from.value];
     out = baseVal / map[to.value];
   } else {
-    // Température
     const f = from.value, t = to.value;
     const toC = (x, u) => u==='C'?x : u==='F' ? (x-32)*5/9 : x-273.15;
     const fromC = (x, u) => u==='C'?x : u==='F' ? x*9/5+32 : x+273.15;

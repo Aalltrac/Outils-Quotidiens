@@ -1,4 +1,3 @@
-/* ...existing code... */
 import QRCode from 'qrcode';
 const text = document.getElementById('text');
 const size = document.getElementById('size');
@@ -19,5 +18,3 @@ dlBtn.onclick = () => {
   a.download = 'qrcode.png';
   a.click();
 };
-/* ...existing code... */
-
