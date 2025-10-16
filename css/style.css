@@ -3,90 +3,192 @@
   --text: #0f1216;
   --muted: #6b7280;
   --card: #f7f8f9;
+  --surface: color-mix(in oklab, #ffffff 92%, #e8ecf3 8%);
   --border: #e5e7eb;
+
+  --primary: #0f172a;
+  --secondary: #3b82f6;
   --accent: #0f172a;
-  /* design system */
-  --radius: 12px; --radius-lg: 16px;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
-  --shadow-md: 0 10px 28px rgba(0,0,0,.10);
+  --accent-2: #6d28d9;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --radius: 12px; --radius-lg: 16px; --radius-xl: 18px;
+  --shadow-xs: 0 1px 4px rgba(0,0,0,.05);
+  --shadow-sm: 0 2px 10px rgba(0,0,0,.08);
+  --shadow-md: 0 10px 28px rgba(0,0,0,.12);
+  --shadow-lg: 0 28px 60px rgba(0,0,0,.14);
   --ring: rgba(59,130,246,.25);
+
+  --grad-primary: linear-gradient(180deg, var(--accent), color-mix(in oklab, var(--accent) 88%, var(--text) 12%));
+  --grad-card: linear-gradient(180deg, #ffffff, color-mix(in oklab, #ffffff 92%, #eef2f7 8%));
+
+  --glass: rgba(255,255,255,.55);
+  --glass-border: rgba(0,0,0,.06);
+
+  --space-1: 6px; --space-2: 10px; --space-3: 14px;
+  --space-4: 18px; --space-5: 24px; --space-6: 32px;
+
+  --font-sans: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --h1: clamp(30px, 4.6vw, 44px);
+  --h2: clamp(20px, 3.3vw, 26px);
+  --h3: clamp(16px, 2.6vw, 20px);
 }
+
 :root.dark {
   --bg: #0b0d10;
-  --text: #f3f4f6;
-  --muted: #9ca3af;
+  --text: #eef0f3;
+  --muted: #a6adb8;
   --card: #0f1115;
+  --surface: color-mix(in oklab, #0b0d10 88%, #151922 12%);
   --border: #1f2329;
+
+  --primary: #e5e7eb;
+  --secondary: #60a5fa;
   --accent: #e5e7eb;
+  --accent-2: #a78bfa;
+
   --ring: rgba(147,197,253,.35);
+  --grad-card: linear-gradient(180deg, color-mix(in oklab, #0f1115 92%, #0b0d10 8%), color-mix(in oklab, #0f1115 80%, #0b0d10 20%));
+
+  --glass: rgba(12,14,18,.55);
+  --glass-border: rgba(255,255,255,.06);
 }
+
 * { box-sizing: border-box }
 html,body { height: 100% }
 body {
   margin: 0; background: var(--bg); color: var(--text);
-  font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
 }
+
 .site-header,.site-footer {
   display:flex; align-items:center; justify-content:space-between;
-  padding: 16px 20px; border-bottom: 1px solid var(--border);
-  backdrop-filter: saturate(1.1);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border);
+  background: var(--glass);
+  backdrop-filter: saturate(1.1) blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
-.site-footer { border-top:1px solid var(--border); border-bottom:0; font-size: 14px }
+.site-footer {
+  border-top: 1px solid var(--border); border-bottom: 0; font-size: 14px;
+  background: transparent; backdrop-filter: none;
+}
+
 .logo { display:flex; gap:10px; align-items:center; text-decoration:none; color: inherit }
-.logo-mark { font-family:"Space Mono", monospace; font-size: 20px }
+.logo-mark { font-family: var(--font-mono); font-size: 20px; opacity:.9 }
 .logo-text { font-weight: 700; letter-spacing: .01em }
-.icon-btn { display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:10px; border:1px solid var(--border); background: transparent; color: var(--text); text-decoration:none; transition: background .14s ease, transform .14s ease, box-shadow .14s ease }
-.icon-btn:hover { background: var(--card); transform: scale(1.03); box-shadow: var(--shadow-sm) }
-.container { max-width: 1100px; margin: 0 auto; padding: 24px 20px }
-.intro h1 { margin:0 0 6px; font-size: clamp(30px, 4.5vw, 44px); letter-spacing:-0.01em }
-.sub { color: var(--muted); margin:0 0 22px }
+.icon-btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:38px; border-radius:10px;
+  border:1px solid var(--glass-border);
+  background: color-mix(in oklab, var(--surface) 70%, var(--bg) 30%);
+  color: var(--text); text-decoration:none;
+  transition: background .16s ease, transform .14s ease, box-shadow .18s ease;
+  box-shadow: var(--shadow-xs);
+}
+.icon-btn:hover { background: var(--card); transform: translateY(-1px); box-shadow: var(--shadow-sm) }
+
+.container { max-width: 1100px; margin: 0 auto; padding: var(--space-5) var(--space-5) }
+.intro h1 { margin:0 0 6px; font-size: var(--h1); letter-spacing:-0.01em }
+.sub { color: var(--muted); margin:0 0 var(--space-4) }
+
 .grid {
   display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
-  gap: 16px;
+  gap: var(--space-4);
 }
 .card {
-  display:block; padding:18px; border:1px solid var(--border); border-radius: var(--radius-lg);
-  background: var(--card); text-decoration:none; color: inherit;
-  transition: box-shadow .18s ease, border-color .18s ease, transform .18s ease;
+  display:block; padding: 18px; border:1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  background: var(--grad-card);
+  text-decoration:none; color: inherit;
+  transition: box-shadow .22s ease, border-color .18s ease, transform .18s ease, outline-color .18s ease, background .2s ease;
+  box-shadow: var(--shadow-xs);
+  will-change: transform;
 }
-.card:hover { transform: scale(1.01); box-shadow: var(--shadow-md); border-color: transparent }
-.card i { font-size: 24px; color: var(--accent); transition: transform .18s ease, opacity .18s ease }
-.card:hover i { transform: translateY(-2px); opacity: .95 }
-.card h2 { margin: 10px 0 6px; font-size: 18px }
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+  outline: 2px solid color-mix(in oklab, var(--secondary) 30%, transparent 70%);
+  outline-offset: 0;
+}
+.card i {
+  font-size: 26px; color: var(--secondary);
+  transition: transform .18s ease, opacity .18s ease, filter .2s ease;
+  filter: drop-shadow(0 2px 6px color-mix(in oklab, var(--secondary) 30%, transparent 70%));
+}
+.card:hover i { transform: translateY(-2px) scale(1.02); opacity:.98 }
+.card h2 { margin: 10px 0 6px; font-size: var(--h3) }
 .card p { margin:0; color: var(--muted) }
-.tool {
-  max-width: 860px; margin: 0 auto; padding: 28px 20px;
-}
-.tool h1 { margin:0 0 14px; font-size: clamp(26px, 3.2vw, 36px); letter-spacing:-0.01em }
-.row { display:flex; gap: 14px; flex-wrap: wrap }
-.field {
-  flex:1; min-width: 220px; display:flex; flex-direction:column; gap:6px;
-}
+
+.tool { max-width: 860px; margin: 0 auto; padding: var(--space-5) var(--space-5) }
+.tool h1 { margin:0 0 14px; font-size: var(--h2); letter-spacing:-0.01em }
+
+.row { display:flex; gap: var(--space-3); flex-wrap: wrap }
+.field { flex:1; min-width: 220px; display:flex; flex-direction:column; gap:6px }
 label { font-weight: 600 }
+
 input, select, textarea, button {
   font: inherit; color: inherit; background: var(--bg); border:1px solid var(--border);
-  border-radius: var(--radius); padding: 10px 12px; transition: box-shadow .14s ease, border-color .14s ease, background .14s ease, transform .08s ease;
+  border-radius: var(--radius); padding: 10px 12px;
+  transition: box-shadow .16s ease, border-color .14s ease, background .14s ease, transform .08s ease;
 }
+input:hover, select:hover, textarea:hover { background: color-mix(in oklab, var(--bg) 92%, var(--card) 8%) }
 input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, .card:focus-visible {
   outline: none; border-color: transparent; box-shadow: 0 0 0 3px var(--ring);
 }
 textarea { min-height: 160px; resize: vertical }
+
 button.primary {
-  background: linear-gradient(180deg, var(--accent), color-mix(in oklab, var(--accent) 90%, var(--text) 10%));
+  background: var(--grad-primary);
   color: var(--bg); border-color: var(--accent);
+  box-shadow: 0 6px 20px color-mix(in oklab, var(--secondary) 16%, transparent 84%);
 }
+button.primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-md) }
+button { background: var(--bg) }
 button:disabled { opacity:.6; cursor:not-allowed }
-.actions { display:flex; gap:12px; flex-wrap: wrap; margin-top: 12px }
+.actions { display:flex; gap:12px; flex-wrap: wrap; margin-top: var(--space-3) }
+
 .output {
-  margin-top: 16px; padding: 16px; border:1px solid var(--border); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow-sm);
+  margin-top: var(--space-4); padding: var(--space-4);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  background: color-mix(in oklab, var(--card) 88%, transparent 12%);
+  box-shadow: var(--shadow-sm);
 }
 .output strong { font-size: 1.15em }
 .small { color: var(--muted); font-size: 13px }
 footer a { color: inherit }
 .helper { display:flex; align-items:center; gap:8px; color: var(--muted); transition: color .12s ease }
 .helper:hover { color: var(--text) }
-kbd { font-family:"Space Mono", monospace; border:1px solid var(--border); border-radius:8px; padding:2px 6px; background: var(--bg) }
+kbd { font-family: var(--font-mono); border:1px solid var(--border); border-radius:8px; padding:2px 6px; background: var(--bg) }
 
-.container, .tool { animation: fadeIn .28s ease-out both }
+.container, .tool { animation: fadeIn .36s ease-out both }
 @keyframes fadeIn { from { opacity:0; transform: translateY(6px) } to { opacity:1; transform: translateY(0) } }
+
+[data-animate="rise"] { opacity:0; transform: translateY(8px); transition: opacity .4s ease, transform .4s ease }
+[data-animate="rise"].in-view { opacity:1; transform: translateY(0) }
+
+.output.loading {
+  position: relative; overflow: hidden;
+}
+.output.loading::after {
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    color-mix(in oklab, var(--card) 90%, #fff 10%) 45%,
+    transparent 100%);
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+@keyframes shimmer { from { transform: translateX(-40%) } to { transform: translateX(40%) } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important }
+}
+
+.card:focus-visible, .icon-btn:focus-visible, button:focus-visible { outline: 2px solid var(--ring) }
