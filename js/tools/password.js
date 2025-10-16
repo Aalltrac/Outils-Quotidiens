@@ -1,3 +1,4 @@
+/* ...existing code... */
 import { copyText } from '../script.js';
 const len=document.getElementById('len');
 const upper=document.getElementById('upper');
@@ -19,3 +20,5 @@ function gen(){
 document.getElementById('generate').onclick = gen;
 document.getElementById('copy').onclick = () => copyText(out.textContent, document.getElementById('copy'));
 gen();
+/* ...existing code... */
+

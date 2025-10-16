@@ -1,3 +1,4 @@
+/* ...existing code... */
 import { copyText } from '../script.js';
 const ta = document.getElementById('text');
 const stats = document.getElementById('stats');
@@ -11,3 +12,5 @@ function compute(){
 ta.addEventListener('input', compute);
 compute();
 document.getElementById('copy').onclick = () => copyText(ta.value, document.getElementById('copy'));
+/* ...existing code... */
+

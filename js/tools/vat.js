@@ -1,3 +1,4 @@
+/* ...existing code... */
 import { copyText } from '../script.js';
 const amount = document.getElementById('amount');
 const rate = document.getElementById('rate');
@@ -14,3 +15,5 @@ document.getElementById('compute').onclick = () => {
   result.innerHTML = `HT: ${fmt(ht)} · TVA: ${fmt(tva)} · TTC: ${fmt(ttc)} <button id="copy" class="icon-btn">Copier</button>`;
   document.getElementById('copy').onclick = () => copyText(`${ht.toFixed(2)};${tva.toFixed(2)};${ttc.toFixed(2)}`, document.getElementById('copy'));
 };
+/* ...existing code... */
+

@@ -1,3 +1,4 @@
+/* ...existing code... */
 const len = document.getElementById('len');
 const wid = document.getElementById('wid');
 const result = document.getElementById('result');
@@ -8,3 +9,5 @@ document.getElementById('compute').onclick = () => {
   const area = l*w;
   result.textContent = `${fmt(area)} m²`;
 };
+/* ...existing code... */
+

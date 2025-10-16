@@ -1,3 +1,4 @@
+/* ...existing code... */
 import tinycolor from 'tinycolor2';
 import { copyText } from '../script.js';
 
@@ -23,3 +24,5 @@ updateFromColor(picker.value);
 document.getElementById('copyHex').onclick = () => copyText(hex.value, document.getElementById('copyHex'));
 document.getElementById('copyRgb').onclick = () => copyText(rgb.value, document.getElementById('copyRgb'));
 document.getElementById('copyHsl').onclick = () => copyText(hsl.value, document.getElementById('copyHsl'));
+/* ...existing code... */
+
